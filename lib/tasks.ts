@@ -10,7 +10,7 @@ export async function getTasks() {
   return await db.select().from(tasksTable)
 }
 
-export async function addTask(form: FormData) {
+export async function createTask(form: FormData) {
   await db.insert(tasksTable).values({
     title: String(form.get('title')),
     done: false,

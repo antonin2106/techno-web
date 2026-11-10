@@ -9,14 +9,13 @@ export default async function () {
 
       <ul className=" list-disc list-inside">
         {tasks.map((task) => (
-          <li key={task}> {task} </li>
+          <li key={task.id}> {task.title} </li>
         ))}
       </ul>
 
       <form action={createTask}>
         Tâche:
         <input name="title" />
-        <input name="bonjour_lur" />
         <button> ajouter </button>
       </form>
     </section>

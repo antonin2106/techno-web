@@ -13,7 +13,7 @@ export async function getTasks() {
 }
 
 export async function createTask(form: FormData) {
-  const task = form.get("bonjour_lur")?.toString();
+  const task = form.get("title")?.toString();
 
   if (task) {
     tasks.push(task);
